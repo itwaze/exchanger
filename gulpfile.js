@@ -28,7 +28,7 @@ gulp.task('styles', function () {
 	.pipe(minifycss())
 	.pipe(gulp.dest('app/assets/css'))
 	.pipe(browserSync.stream());
-});
+}); 
 
 gulp.task('jade', function() {
 	return gulp.src('dev/jade/pages/*.jade')
