@@ -1,0 +1,19 @@
+.wrapper {
+  width: 1200px; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  margin: auto;
+  height: 60px; }
+  .header__logo {
+    border: solid 1px black;
+    width: 250px;
+    height: 60px; }
+  .header__nav {
+    border: solid 1px black;
+    width: 500px;
+    height: 60px; }
+
+/*# sourceMappingURL=common.css.map */
