@@ -1,0 +1,63 @@
+.content
+    display: flex
+    width: 984px
+    margin: auto
+    justify-content: space-between
+    margin-top: 55px
+    &__block
+        width: 308px
+        height: 352px
+        padding: 23px 30px 18px
+        box-sizing: border-box
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &__ethereum
+            background: url('../img/ethereum-bg.png') no-repeat
+        &__litecoin
+            background: url('../img/litecoin-bg.png') no-repeat
+        &__bitcoin
+            background: url('../img/bitcoin-bg.png') no-repeat
+            background-position: -78px -111px
+        &__item:last-child
+            font-size: 1.2em
+
+        &__title
+            text-align: center
+            font-family: Roboto
+            font-weight: bold
+            letter-spacing: 1px
+            color: #fff
+            font-size: 1.2em
+        &__price
+            display: flex
+            justify-content: space-between
+            color: rgba(255, 255, 255, .25)
+            font-family: Roboto
+            letter-spacing: .5px
+            margin-top: 8px
+            font-size: .8em
+            &:nth-child(-n+2)
+                color: #fff
+                margin-bottom: 14px
+            &:first-of-type
+                font-size: 1.2em
+                margin-bottom: 12px
+        &__switch
+            width: 44px
+            position: relative
+            top: -6px
+            &--circle
+                background: url('../img/circle.png') no-repeat
+                width: 24px
+                height: 24px
+                position: absolute
+                z-index: 2
+                cursor: pointer
+                transition: .3s
+            &--line
+                background: url('../img/line.png') 0 4px no-repeat
+                width: 41px
+                height: 24px
+                position: absolute
+

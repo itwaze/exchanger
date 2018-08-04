@@ -1,0 +1,551 @@
+@import url(reset.css);
+body {
+  padding-top: 70px;
+  background: url("../img/bg.png") top no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.header {
+  width: 984px;
+  height: 98px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #2b3b45;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .header__text {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 1.8em;
+    margin-left: 110px;
+    line-height: 95px;
+    letter-spacing: 1px; }
+  .header__currency {
+    width: 296px;
+    color: #c3c5c8;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin: 20px 0 0 155px; }
+    .header__currency:hover > .header__currency__inner {
+      visibility: visible;
+      opacity: 1; }
+    .header__currency__inner {
+      visibility: hidden;
+      margin-top: 10px;
+      cursor: pointer;
+      width: 296px;
+      line-height: 35px;
+      border: 1px solid #92e8fe;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background: #0e1b24;
+      opacity: 0;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+      position: relative;
+      z-index: 1; }
+      .header__currency__inner--color {
+        padding: 5px 0 5px 15px; }
+        .header__currency__inner--color:hover {
+          background: rgba(0, 0, 0, 0.2); }
+    .header__currency__usd {
+      cursor: pointer;
+      width: 296px;
+      line-height: 55px;
+      border: 1px solid #92e8fe;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      padding-left: 15px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+    .header__currency__chevron {
+      font-size: .6em;
+      color: #92e8fe;
+      margin-left: 210px; }
+
+.content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 984px;
+  margin: auto;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 55px; }
+  .content__block {
+    width: 308px;
+    height: 352px;
+    padding: 23px 30px 18px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .content__block__ethereum {
+      background: url("../img/ethereum-bg.png") no-repeat; }
+    .content__block__litecoin {
+      background: url("../img/litecoin-bg.png") no-repeat; }
+    .content__block__bitcoin {
+      background: url("../img/bitcoin-bg.png") no-repeat;
+      background-position: -78px -111px; }
+    .content__block__item:last-child {
+      font-size: 1.2em; }
+    .content__block__title {
+      text-align: center;
+      font-family: Roboto;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #fff;
+      font-size: 1.2em; }
+    .content__block__price {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      color: rgba(255, 255, 255, 0.25);
+      font-family: Roboto;
+      letter-spacing: .5px;
+      margin-top: 8px;
+      font-size: .8em; }
+      .content__block__price:nth-child(-n+2) {
+        color: #fff;
+        margin-bottom: 14px; }
+      .content__block__price:first-of-type {
+        font-size: 1.2em;
+        margin-bottom: 12px; }
+    .content__block__switch {
+      width: 44px;
+      position: relative;
+      top: -6px; }
+      .content__block__switch--circle {
+        background: url("../img/circle.png") no-repeat;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+      .content__block__switch--line {
+        background: url("../img/line.png") 0 4px no-repeat;
+        width: 41px;
+        height: 24px;
+        position: absolute; }
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  body {
+    padding-top: 23px;
+    background: url("../img/bg.png") top no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh; }
+  .header {
+    width: 90%;
+    height: 15%;
+    background: none;
+    border: none; }
+    .header__text {
+      display: none; }
+    .header__currency {
+      width: 100%;
+      margin: 0; }
+      .header__currency__inner {
+        width: 100%;
+        line-height: 1.5em;
+        font-size: 1.2em;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; }
+        .header__currency__inner--color {
+          padding-left: 1em; }
+      .header__currency__usd {
+        width: 100%;
+        height: 80%;
+        line-height: 2.6em;
+        font-size: 1.2em;
+        padding-left: 1em;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; }
+      .header__currency__chevron {
+        margin-left: 67%; }
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px; }
+    .content__block {
+      width: 90%;
+      height: 320px;
+      padding: 20px;
+      margin: auto;
+      margin-bottom: 20px;
+      overflow: hidden;
+      -webkit-border-radius: 10px;
+      border-radius: 10px; }
+      .content__block__bitcoin {
+        -webkit-background-size: 152% 152%;
+        background-size: 152%; }
+      .content__block__litecoin {
+        -webkit-background-size: 100% 100%;
+        background-size: 100%; }
+      .content__block__ethereum {
+        -webkit-background-size: 104% 104%;
+        background-size: 104%; }
+      .content__block__item:last-child {
+        font-size: 1.1em; } }
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  body {
+    padding-top: 23px;
+    background: url("../img/bg.png") top no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh; }
+  .header {
+    width: 90%;
+    height: 15%;
+    background: none;
+    border: none; }
+    .header__text {
+      display: none; }
+    .header__currency {
+      width: 100%;
+      height: 100%;
+      margin: auto; }
+      .header__currency__inner {
+        width: 100%;
+        line-height: 2em;
+        font-size: 1.4em;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        margin-top: 15px; }
+        .header__currency__inner--color {
+          padding-left: 1em; }
+      .header__currency__usd {
+        width: 100%;
+        height: 80%;
+        line-height: 2.5em;
+        font-size: 1.4em;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        position: relative;
+        left: .7%;
+        margin: 0; }
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 10px;
+    margin: auto; }
+    .content__block {
+      -webkit-background-size: 100vw 100vw;
+      background-size: 100vw;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+      height: 65vh; }
+      .content__block__bitcoin {
+        background: url("../img/bitcoin-bg.png") no-repeat;
+        background-position: -86px -122px;
+        -webkit-background-size: 150% 150%;
+        background-size: 150%; }
+      .content__block__litecoin {
+        -webkit-background-size: 100% 100%;
+        background-size: 100%; }
+      .content__block__ethereum {
+        -webkit-background-size: 104% 104%;
+        background-size: 104%; }
+      .content__block__price {
+        margin-top: 8px;
+        font-size: 1em; }
+        .content__block__price:nth-child(-n+2) {
+          color: #fff;
+          margin-bottom: 14px;
+          font-size: 1em; }
+        .content__block__price:first-of-type {
+          font-size: 1.5em;
+          margin-bottom: 12px; }
+      .content__block__title {
+        font-size: 1.7em; }
+      .content__block__item:last-child {
+        font-size: 1em; } }
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  body {
+    padding: 15px;
+    background: url("../img/bg.png") top no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh; }
+  .header {
+    background: none;
+    border: none;
+    width: 100%; }
+    .header__text {
+      display: none; }
+    .header__currency {
+      margin: 0;
+      width: 100%; }
+      .header__currency__usd {
+        width: 100%;
+        font-size: 1.7em;
+        line-height: 2;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        position: relative; }
+      .header__currency__chevron {
+        position: absolute;
+        right: 7%;
+        top: 35%; }
+      .header__currency__inner {
+        width: 100%;
+        line-height: 1em;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; }
+        .header__currency__inner--color {
+          padding: .7em;
+          font-size: 2em; }
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%; }
+    .content__block {
+      width: 100%;
+      padding: 25px 25px 10px;
+      height: 75vh;
+      margin-bottom: 20px; }
+      .content__block__price {
+        margin-bottom: 10px;
+        font-size: 1.1em; }
+        .content__block__price:nth-child(-n+2) {
+          color: #fff;
+          margin-bottom: 14px;
+          font-size: 1.1em; }
+        .content__block__price:first-of-type {
+          font-size: 1.7em;
+          margin-bottom: 14px; }
+      .content__block__ethereum {
+        -webkit-background-size: 103% 103%;
+        background-size: 103%; }
+      .content__block__litecoin {
+        -webkit-background-size: 100% 100%;
+        background-size: 100%; }
+      .content__block__bitcoin {
+        -webkit-background-size: 150% 150%;
+        background-size: 150%;
+        background-position: -98px -144px;
+        overflow: hidden;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px; }
+      .content__block__title {
+        font-size: 1.8em; } }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background: url("../img/bg.png") top no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    padding-top: 40px; }
+  .header {
+    width: 85%;
+    position: relative; }
+    .header__text {
+      margin: 0;
+      font-size: 1.3em;
+      padding-left: 5%; }
+    .header__currency {
+      margin: 0;
+      width: 35%;
+      position: absolute;
+      right: 5%;
+      top: 27%; }
+      .header__currency__usd {
+        width: 100%;
+        height: 40px;
+        line-height: 2.5em;
+        font-size: 16px;
+        position: relative; }
+      .header__currency__chevron {
+        margin: 0;
+        position: absolute;
+        right: 5%;
+        top: 35%; }
+      .header__currency__inner {
+        width: 100%; }
+        .header__currency__inner--color {
+          font-size: 16px;
+          line-height: 1.7em; }
+  .content {
+    width: 85%; }
+    .content__block {
+      width: 30%;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      height: 300px;
+      padding: 15px; }
+      .content__block__title {
+        font-size: 1.1em; }
+      .content__block__price {
+        margin-top: 8px;
+        font-size: 10px; }
+        .content__block__price:first-of-type {
+          font-size: 1em;
+          margin-bottom: 12px; }
+      .content__block__ethereum {
+        -webkit-background-size: 140% 140%;
+        background-size: 140%;
+        background-position: -30px -5px; }
+      .content__block__litecoin {
+        -webkit-background-size: 140% 140%;
+        background-size: 140%;
+        background-position: -30px -8px; }
+      .content__block__bitcoin {
+        -webkit-background-size: 200% 200%;
+        background-size: 200%;
+        background-position: -100px -96px; } }
+
+@media screen and (min-width: 2560px) {
+  .header {
+    width: 70%;
+    height: 15%;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    position: relative; }
+    .header__text {
+      font-size: 3.3em;
+      line-height: 3.7em; }
+    .header__currency {
+      margin: 0;
+      width: 30%;
+      position: absolute;
+      right: 5%;
+      top: 23%; }
+      .header__currency__usd {
+        width: 100%;
+        height: 2.7em;
+        line-height: 2.7em;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        font-size: 2em;
+        padding-left: 7%;
+        position: relative; }
+      .header__currency__chevron {
+        margin: 0;
+        position: absolute;
+        right: 7%;
+        top: 39%; }
+      .header__currency__inner {
+        width: 100%;
+        -webkit-border-radius: 15px;
+        border-radius: 15px; }
+        .header__currency__inner--color {
+          font-size: 2em;
+          line-height: 2.7em;
+          padding-left: 1em; }
+  .content {
+    width: 70%;
+    margin-top: 70px; }
+    .content__block {
+      width: 30%;
+      -webkit-border-radius: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 680px;
+      padding: 40px; }
+      .content__block__ethereum {
+        -webkit-background-size: 120% 120%;
+        background-size: 120%;
+        background-position: -32px -20px; }
+      .content__block__litecoin {
+        -webkit-background-size: 115% 115%;
+        background-size: 115%;
+        background-position: -30px -15px; }
+      .content__block__bitcoin {
+        background-position: -204px -245px;
+        -webkit-background-size: 173% 173%;
+        background-size: 173%; }
+      .content__block__item:last-child {
+        font-size: 1.2em; }
+      .content__block__title {
+        font-size: 2.6em; }
+      .content__block__price {
+        margin-top: 15px;
+        font-size: 1.6em; }
+        .content__block__price:nth-child(-n+2) {
+          color: #fff;
+          margin-bottom: 25px; }
+        .content__block__price:first-of-type {
+          font-size: 2.3em; }
+      .content__block__switch {
+        width: 90px;
+        height: 44px;
+        position: relative;
+        top: -6px; }
+        .content__block__switch--circle {
+          background: url("../img/circle.png") no-repeat;
+          -webkit-background-size: 100% 100%;
+          background-size: 100%;
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          z-index: 2;
+          cursor: pointer;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+        .content__block__switch--line {
+          background: url("../img/line.png") 0 7px no-repeat;
+          width: 90px;
+          height: 50px;
+          position: absolute;
+          -webkit-background-size: 100% 100%;
+          background-size: 100%; } }

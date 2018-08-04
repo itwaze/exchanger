@@ -1,0 +1,65 @@
+@import 'reset.css'
+  
+body
+  padding-top: 70px
+  background: url('../img/bg.png') top no-repeat
+  background-size: cover
+  height: 100vh
+  box-sizing: border-box
+
+.header
+  width: 984px
+  height: 98px
+  margin: auto
+  background-color: rgba(0, 0, 0, .1)
+  border-radius: 10px
+  border: 1px solid #2b3b45
+  display: flex
+  box-sizing: border-box
+  &__text
+    color: #fff
+    font-family: Roboto
+    font-size: 1.8em
+    margin-left: 110px
+    line-height: 95px
+    letter-spacing: 1px
+  &__currency
+    width: 296px
+    color: #c3c5c8
+    font-family: Roboto
+    font-weight: 300
+    font-size: 1.2em
+    margin: 20px 0 0 155px
+    &:hover > &__inner
+      visibility: visible
+      opacity: 1
+    &__inner
+      visibility: hidden
+      margin-top: 10px
+      cursor: pointer
+      width: 296px
+      line-height: 35px
+      border: 1px solid #92e8fe
+      border-radius: 5px
+      background: #0e1b24
+      opacity: 0
+      transition: .3s
+      position: relative
+      z-index: 1
+      &--color
+        padding: 5px 0 5px 15px
+        &:hover
+          background: rgba(0, 0, 0, .2)
+    &__usd
+      cursor: pointer
+      width: 296px
+      line-height: 55px
+      border: 1px solid #92e8fe
+      border-radius: 5px
+      padding-left: 15px
+      box-sizing: border-box
+    &__chevron
+      font-size: .6em
+      color: #92e8fe
+      margin-left: 210px
+      

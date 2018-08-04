@@ -23,12 +23,12 @@ gulp.task('styles', function () {
 	.pipe(sass({
 		includePaths: require('node-bourbon').includePaths
 	}).on('error', sass.logError))
-	.pipe(rename({suffix: '.min', prefix : ''}))
+	// .pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false}))
-	.pipe(minifycss())
+	// .pipe(minifycss())
 	.pipe(gulp.dest('app/assets/css'))
 	.pipe(browserSync.stream());
-}); 
+});
 
 gulp.task('jade', function() {
 	return gulp.src('dev/jade/pages/*.jade')
@@ -39,7 +39,7 @@ gulp.task('jade', function() {
 });
 
 gulp.task('sprite', function() {
-    var spriteData = 
+    var spriteData =
         gulp.src('./dev/sprite/*.*')
             .pipe(spritesmith({
                 imgName: '../img/sprite.png',
